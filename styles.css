@@ -1,0 +1,125 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Montserrat;
+}
+
+form {
+    text-align: center;
+}
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+span {
+    color: crimson;
+}
+
+.contenedorVida,
+.contenedorTrabajo,
+.contenedorObjetivo {
+    margin-top: 60px;
+}
+
+.contenedor input {
+    width: 400px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: none;
+    outline: none;
+    border-bottom: 1px rgb(255, 198, 198) solid;
+    border-right: 1px rgb(255, 198, 198) solid;
+    margin: 5px;
+    padding-left: 20px;
+}
+
+.contenedor input::placeholder {
+    color: rgb(184, 184, 184);
+    font-size: 14px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background: crimson;
+    font-family: Montserrat;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 599px) {
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenedor {
+        width: 80%;
+    }
+    h4 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .contenedorVida,
+    .contenedorTrabajo,
+    .contenedorObjetivo {
+        margin-top: 60px;
+    }
+    .contenedor input {
+        width: 350px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: none;
+        outline: none;
+        border-bottom: 1px rgb(255, 198, 198) solid;
+        border-right: 1px rgb(255, 198, 198) solid;
+        margin: 5px;
+        padding-left: 20px;
+    }
+    .contenedor input::placeholder {
+        color: rgb(184, 184, 184);
+        font-size: 17px;
+    }
+    button {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        width: 300px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        background: crimson;
+        font-family: Montserrat;
+        font-weight: 600;
+        color: white;
+        font-size: 18px;
+    }
+}
