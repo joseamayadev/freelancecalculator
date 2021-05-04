@@ -1,3 +1,7 @@
+:root {
+    --colorFondo: #ff3f5b;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -7,6 +11,22 @@
 body {
     height: 100vh;
     font-family: Montserrat;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 form {
@@ -27,7 +47,7 @@ h4 {
 }
 
 span {
-    color: crimson;
+    color: var(--colorFondo);
 }
 
 .contenedorVida,
@@ -82,6 +102,109 @@ button.procesando {
     animation: procesando 0.5s linear infinite;
 }
 
+
+/* Estilos para mostrar los resultados */
+
+.resultados {
+    position: fixed;
+    top: 0px;
+    left: 200vh;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    background-color: var(--colorFondo);
+    visibility: hidden;
+    transition: 1s;
+    opacity: 0.6;
+}
+
+.resultados .resultadosTitulos {
+    height: 200px;
+}
+
+.resultados .resultadosTitulos h4 {
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 73px;
+    color: #fff;
+}
+
+.resultados .resultadosTitulos h4 {
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 73px;
+    color: #fff;
+}
+
+.resultados .resultadosTitulos p {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 29px;
+    letter-spacing: 0em;
+    color: white;
+    text-align: center;
+}
+
+.resultadosCalculos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0px 130px 0px 130px;
+}
+
+.resultadosCalculos .contenedorCirclesCalculos {
+    height: 300px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resultadosCalculos .contenedorCirclesCalculos p {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 25px;
+    color: white;
+}
+
+.resultadosCalculos .contenedorCirclesCalculos .cirlces {
+    height: 150px;
+    width: 150px;
+    background-color: var(--colorFondo);
+    border-radius: 50%;
+    border: 6px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.resultadosCalculos .contenedorCirclesCalculos .cirlces p.valor {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+
+/* interacciones */
+
+.mostrar {
+    visibility: visible;
+    left: 0vw;
+    transition: 1s;
+    opacity: 1;
+}
+
+
+/* Pantallas pequeñas */
+
 @media (max-width: 599px) {
     form {
         display: flex;
@@ -132,7 +255,17 @@ button.procesando {
         color: white;
         font-size: 18px;
     }
+    .contenedor input.require {
+        border: solid crimson 0.6px;
+        transition: 2s;
+    }
+    .resultados .resultadosTitulos h4 {
+        font-size: 36px;
+    }
 }
+
+
+/* utilizacopn de animaciones */
 
 @keyframes procesando {
     0% {

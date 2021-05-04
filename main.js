@@ -1,6 +1,9 @@
 var mes = document.getElementsByName('mes')[0],
     validaciones = document.querySelectorAll('input'),
-    button = document.getElementById('procesar');
+    button = document.getElementById('procesar'),
+    resultados = document.querySelector('.resultados'),
+    formulario = document.querySelector('form');
+
 
 
 
@@ -12,6 +15,11 @@ function validacionesFormularios() {
             element.classList.add('require');
         } else {
             element.classList.remove('require');
+            setTimeout(() => {
+                button.classList.remove('procesando');
+                resultados.classList.add('mostrar')
+            }, 1500);
+
         }
     });
 }
@@ -22,7 +30,6 @@ button.addEventListener('click', (e) => {
     validacionesFormularios();
     setTimeout(() => {
         button.classList.remove('procesando');
-
-
     }, 1500);
+
 })
