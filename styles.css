@@ -58,6 +58,11 @@ span {
     font-weight: 400;
 }
 
+input.require {
+    border: solid red 1px;
+    transition: 2s;
+}
+
 button {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -70,6 +75,10 @@ button {
     font-weight: 600;
     color: white;
     cursor: pointer;
+}
+
+button.procesando {
+    animation: procesando 0.5s linear infinite;
 }
 
 @media (max-width: 599px) {
@@ -121,5 +130,17 @@ button {
         font-weight: 600;
         color: white;
         font-size: 18px;
+    }
+}
+
+@keyframes procesando {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
     }
 }
