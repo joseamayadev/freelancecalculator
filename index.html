@@ -12,7 +12,7 @@
 <body>
     <form>
         <div class="contenedor contenedorMes">
-            <h4>¿Cuanto te <span>gustaría ganar</span> por mes?</h4>
+            <h4>¿Cuánto te <span>gustaría ganar</span> por mes?</h4>
             <input type="number" name="mes" id="" placeholder="Ingresa tu total mensual" required />
         </div>
 
@@ -20,9 +20,9 @@
             <h4>Agrega tus <span>gastos</span> fijos</h4>
             <input type="number" name="renta" id="" placeholder="Renta" />
 
-            <input type="number" name="celular" id="" placeholder="Costo de telefonía celular" />
+            <input type="number" name="celular" id="" placeholder="Celular" />
 
-            <input type="number" name="internet" id="" placeholder="Costo fijo de Internet" />
+            <input type="number" name="internet" id="" placeholder="Internet" />
 
             <input type="number" name="serviciosFijos" id="" placeholder="Costo de servicios fijos" />
 
@@ -33,7 +33,7 @@
             <h4>Costos <span>fijos</span> de trabajo</h4>
             <input type="number" name="herramienta" id="" placeholder="Herramientas de trabajo" />
 
-            <input type="number" name="dominio" id="" placeholder="Costo de dominio" />
+            <input type="number" name="dominio" id="" placeholder="Dominio web" />
 
             <input type="number" name="hosting" id="" placeholder="Hosting de página web" />
 
@@ -42,14 +42,14 @@
 
         <div class="contenedor contenedorObjetivo">
             <h4>Organiza tu <span>tiempo</span></h4>
-            <input type="number" name="herramienta" id="" placeholder="Días de trabajo por semana" />
+            <input type="number" name="diasPorSemana" id="" placeholder="Días de trabajo por semana" />
 
-            <input type="number" name="dominio" id="" placeholder="Horas de trabajo por día" />
+            <input type="number" name="horasPorDia" id="" placeholder="Horas de trabajo por día" />
 
-            <input type="number" name="hosting" id="" placeholder="Días de vacaciones" />
+            <input type="number" name="diasVacaciones" id="" placeholder="Días de vacaciones" />
         </div>
 
-        <button id="procesar">Procesar Informacion</button>
+        <button id="procesar">CALCULAR</button>
     </form>
 
     <div class="resultados">
@@ -61,49 +61,52 @@
         <div class="resultadosCalculos">
             <div class="contenedorCirclesCalculos">
                 <div class="cirlces">
-                    <p class="valor">200</p>
-                    <p>Horas</p>
+                    <p class="horasYear"></p>
+                    <p>Dólares</p>
+                </div>
+                <p class="decripcionValores">Por mes</p>
+            </div>
+
+            <div class="contenedorCirclesCalculos">
+                <div class="cirlces">
+                    <p class="totalAnual"></p>
+                    <p>Dólares</p>
                 </div>
                 <p class="decripcionValores">Por año</p>
             </div>
 
             <div class="contenedorCirclesCalculos">
                 <div class="cirlces">
-                    <p class="valor">200</p>
+                    <p class="totalDiasSemana"></p>
                     <p>Horas</p>
                 </div>
-                <p class="decripcionValores">Por año</p>
+                <p class="decripcionValores">Por Semana</p>
             </div>
 
             <div class="contenedorCirclesCalculos">
                 <div class="cirlces">
-                    <p class="valor">200</p>
+                    <p class="totalHorasMes"></p>
                     <p>Horas</p>
                 </div>
-                <p class="decripcionValores">Por año</p>
+                <p class="decripcionValores">Por Mes</p>
             </div>
 
             <div class="contenedorCirclesCalculos">
                 <div class="cirlces">
-                    <p class="valor">200</p>
-                    <p>Horas</p>
-                </div>
-                <p class="decripcionValores">Por año</p>
-            </div>
-
-            <div class="contenedorCirclesCalculos">
-                <div class="cirlces">
-                    <p class="valor">200</p>
+                    <p class="totalHorasYear"></p>
                     <p>Horas</p>
                 </div>
                 <p class="decripcionValores">Por año</p>
             </div>
         </div>
 
-        <!-- <div class="contenedorPrecioXHora">
-            <div class="circlePrecioPorHora"></div>
-            <p class="descripcionPrecioPorHora">Precio por ahora</p>
-        </div> -->
+        <div class="contenedorPrecioXHora">
+            <div class="circlePrecioPorHora">
+                <p class="valorPrecioXhora">12.56</p>
+                <p>Dólares</p>
+            </div>
+            <p class="descripcionPrecioPorHora">Tu precio por hora</p>
+        </div>
     </div>
 
     <script src="main.js "></script>

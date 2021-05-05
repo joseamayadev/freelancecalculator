@@ -63,35 +63,32 @@ span {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: none;
-    outline: none;
-    border-bottom: 1px rgb(255, 198, 198) solid;
-    border-right: 1px rgb(255, 198, 198) solid;
+    border: 1px solid var(--colorFondo);
     margin: 5px;
     padding-left: 20px;
+    outline: var(--colorFondo);
 }
 
 .contenedor input::placeholder {
-    color: rgb(184, 184, 184);
+    color: rgb(114, 114, 114);
     font-size: 14px;
     font-family: Montserrat;
     font-weight: 400;
 }
 
 input.require {
-    border: solid red 1px;
-    outline: solid red 1px;
+    border: solid var(--colorFondo) 2px;
+    outline: solid var(--colorFondo) 2px;
     transition: 2s;
 }
 
 button {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
-    width: 300px;
+    width: 400px;
     height: 40px;
-    border-radius: 20px;
     border: none;
-    background: crimson;
+    background: var(--colorFondo);
     font-family: Montserrat;
     font-weight: 600;
     color: white;
@@ -111,11 +108,16 @@ button.procesando {
     left: 200vh;
     width: 100%;
     height: 100%;
-    padding-top: 100px;
+    padding-top: 50px;
     background-color: var(--colorFondo);
     visibility: hidden;
     transition: 1s;
     opacity: 0.6;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .resultados .resultadosTitulos {
@@ -192,6 +194,44 @@ button.procesando {
     color: white;
 }
 
+.contenedorPrecioXHora {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedorPrecioXHora .circlePrecioPorHora {
+    width: 250px;
+    height: 250px;
+    border: 10px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedorPrecioXHora .circlePrecioPorHora p {
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+}
+
+.contenedorPrecioXHora .descripcionPrecioPorHora {
+    font-size: 40px;
+    color: white;
+    font-weight: 400;
+}
+
+.contenedorPrecioXHora .circlePrecioPorHora p.valorPrecioXhora {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+
 
 /* interacciones */
 
@@ -247,7 +287,6 @@ button.procesando {
         margin-bottom: 20px;
         width: 300px;
         height: 40px;
-        border-radius: 20px;
         border: none;
         background: crimson;
         font-family: Montserrat;
