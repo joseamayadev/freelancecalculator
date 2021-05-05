@@ -1,6 +1,7 @@
 var validaciones = document.querySelectorAll('input'),
     button = document.getElementById('procesar'),
     resultados = document.querySelector('.resultados'),
+    cerrar = document.querySelector('.cerrar'),
     formulario = document.querySelector('form');
 
 
@@ -38,6 +39,14 @@ function validacionesFormularios() {
     });
 }
 
+
+//vaciar campos
+function vaciarInputs() {
+    validaciones.forEach(element => {
+        element.textContent = "";
+    });
+}
+
 button.addEventListener('click', (e) => {
     e.preventDefault();
     button.classList.add('procesando');
@@ -64,13 +73,18 @@ button.addEventListener('click', (e) => {
 
 });
 
+cerrar.addEventListener('click', () => {
+    resultados.classList.remove('mostrar');
+
+})
+
 function mostrarResultados(totalMes, totalAnual, totalDiasSemana, totalhorasMes, totalHorasYear, valorPrecioXhora) {
-    document.querySelector('.horasYear').innerText = totalMes;
-    document.querySelector('.totalAnual').innerText = totalAnual;
-    document.querySelector('.totalDiasSemana').innerText = totalDiasSemana;
-    document.querySelector('.totalHorasMes').innerText = totalhorasMes;
-    document.querySelector('.totalHorasYear').innerText = totalHorasYear;
-    document.querySelector('.valorPrecioXhora').innerText = valorPrecioXhora.toFixed(2);
+    document.querySelector('.horasYear').innerText = totalMes ? totalMes : 'Error';
+    document.querySelector('.totalAnual').innerText = totalAnual ? totalAnual : 'Error';
+    document.querySelector('.totalDiasSemana').innerText = totalDiasSemana ? totalDiasSemana : 'Error';
+    document.querySelector('.totalHorasMes').innerText = totalhorasMes ? totalhorasMes : 'Error';
+    document.querySelector('.totalHorasYear').innerText = totalHorasYear ? totalHorasYear : 'Error';
+    document.querySelector('.valorPrecioXhora').innerText = valorPrecioXhora == 'Infinity' ? 'Error' : valorPrecioXhora.toFixed(2);
 }
 
 //extraer los valores 
